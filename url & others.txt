@@ -1,0 +1,10 @@
+
+Heroku URL  : https://file-system0.herokuapp.com/
+
+File Creation : https://file-system0.herokuapp.com/create_file
+To get all files  : https://file-system0.herokuapp.com/get_files
+To get content  : https://file-system0.herokuapp.com/get_content/(file name here)
+
+Github URL  : https://github.com/Joshua10roys/nodejs-filesystem
+
+Last Commit : 0aa1bae6a9b40ed3d1caf4f93f10b90823d98f32
