@@ -18,7 +18,7 @@ var content = new Date().toString();
 
 // api home
 app.get('/', (req, res) => {
-    res.send("<h1>Task File System<h1>")
+    res.send("Task File System")
 })
 
 // api endpoint to create file
@@ -26,9 +26,9 @@ app.get('/create_file', (req, res) => {
 
     fs.writeFile(`./files/${dateFormated}-${timeFormated}.txt`, content, (error) => {
         if (error) {
-            res.status(500).send("<p>file not created</p>")
+            res.status(500).send("file not created")
         } else {
-            res.status(200).send("<h2>File has been created</h2>")
+            res.status(200).send("File has been created")
         }
     })
 })
@@ -37,7 +37,7 @@ app.get('/create_file', (req, res) => {
 app.get('/get_files', (req, res) => {
 
     fs.readdir('./files', (error, files) => {
-        if (error) { res.status(500).send("<p>something went wrong</p><p>please try again</p>") }
+        if (error) { res.status(500).send("something went wrongplease try again") }
         else { res.status(200).send(files) }
     })
 })
@@ -48,7 +48,7 @@ app.get('/get_content/:file_name', (req, res) => {
     const file_name = req.params.file_name
 
     fs.readFile(`./files/${file_name}`, (error, data) => {
-        if (error) { res.status(500).send("<h2>file not exist</h2><p>please check the file name entered</p>") }
+        if (error) { res.status(500).send("File does not exist, Please check the file name entered") }
         else { res.status(200).send(data.toString()) }
     })
 })
