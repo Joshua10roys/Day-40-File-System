@@ -16,7 +16,7 @@ var timeFormated = time[0].split(':').join('-') + '-' + time[1];
 //content
 var content = new Date().toString();
 
-// api endpoint to create file
+// api home
 app.get('/', (req, res) => {
     res.send("<h1>Task File System<h1>")
 })
